@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.bitbucket.epelizzon.mte.webapp"})
+@ComponentScan(basePackages = {"com.github.epelizzon.mte.webapp"})
 @Import({HibernateConfiguration.class})
 public class SpringConfiguration extends WebMvcConfigurerAdapter {
     
