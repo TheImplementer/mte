@@ -13,12 +13,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.github.epelizzon.mte.webapp"})
 @Import({HibernateConfiguration.class})
-public class SpringConfiguration extends WebMvcConfigurerAdapter {
+public class RootConfiguration extends WebMvcConfigurerAdapter {
     
     @Bean
     public PropertyPlaceholderConfigurer placeholderConfigurer() {
         final PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
-        propertyPlaceholderConfigurer.setLocation(new ClassPathResource("/"));
+        propertyPlaceholderConfigurer.setLocation(new ClassPathResource("webapp.properties"));
         propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(true);
         return propertyPlaceholderConfigurer;
     }
